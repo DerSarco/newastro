@@ -1,12 +1,13 @@
-from flask import Flask, request, redirect
-from bs4 import BeautifulSoup
-import requests
+import json
+
+from flask import Flask, redirect, Response, request, Response
+from flask_api import status
+
+
+from api.utils.horoscope_utils import *
+
 app = Flask(__name__)
 
-signs = [
-    'aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo', 'libra',
-    'scorpio', 'sagittarius', 'capricorn', 'aquarius', 'pisces'
-]
 
 @app.get('/')
 def hello_world():
@@ -14,20 +15,35 @@ def hello_world():
 
 @app.post('/')
 def horoscope():
-    sign = request.args['sign'].lower()
-    try:
-        if (sign not in signs):
-            raise Exception("Sign not found, please refer to your mother because we don't have any documentation for this... Long Live Kotlin")
-        response = horoscope_info(sign=signs.index(sign)+1)
-        return response, 200
-    except Exception as e:
-        return {'message': str(e)}, 400
 
-def horoscope_info(sign):
-    """
-    Endpoint to parse data from astrology site.
-    """
-    res = requests.get(f"https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign={sign}")
-    soup = BeautifulSoup(res.content, 'html.parser')
-    data = soup.find('div', attrs={'class': 'main-horoscope'})    
-    return data.p.text
+    sign = request.json.get('sign', None)
+    date = request.json.get('date', None)
+    lang = request.json.get('lang', None)
+    
+    try:        
+        sign_object = get_horoscope(sign, date, lang)        
+        json_data = json.dumps(sign_object)
+        
+        return  Response(json_data, status=status.HTTP_200_OK, mimetype='application/json')
+    except ValueError as ve:
+        return {'message': str(ve)}, status.HTTP_400_BAD_REQUEST
+    except Exception as e:
+        return {'message': str(e)}, status.HTTP_500_INTERNAL_SERVER_ERROR
+    
+
+@app.route('/<sign>/')
+def horoscope_get(sign=None):
+
+    date = request.args.get('date', None)
+    lang = request.args.get('lang', None)
+    
+    try:        
+        sign_object = get_horoscope(sign, date, lang)        
+        json_data = json.dumps(sign_object)
+        
+        return  Response(json_data, status=status.HTTP_200_OK, mimetype='application/json')
+    except ValueError as ve:
+        return {'message': str(ve)}, status.HTTP_400_BAD_REQUEST
+    except Exception as e:
+        return {'message': str(e)}, status.HTTP_500_INTERNAL_SERVER_ERROR
+    
