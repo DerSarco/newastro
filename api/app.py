@@ -16,6 +16,7 @@ def hello_world():
 @app.post('/')
 def horoscope():
 
+
     sign = request.json.get('sign', None)
     date = request.json.get('date', None)
     lang = request.json.get('lang', None)
