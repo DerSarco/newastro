@@ -9,8 +9,11 @@ Flask API para el curso Intermedio de Android de [Aristidevs](https://github.com
 
 # API
 
-POST Method
-https://newastro.vercel.app/?sign=YOUR_SIGN_HERE
+GET Method
+https://newastro.vercel.app/SIGN_HERE
+
+GET with date (Formato de la fecha es YYYYMMDD)
+https://newastro.vercel.app/SIGN_HERE/DATE
 
 Que signos están soportados?
 
