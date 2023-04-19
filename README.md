@@ -10,7 +10,9 @@ Flask API para el curso Intermedio de Android de [Aristidevs](https://github.com
 # API
 
 POST Method
-https://newastro.vercel.app/?sign=YOUR_SIGN_HERE
+https://newastro.vercel.app/?sign=YOUR_SIGN_HERE&date=YYYYMMDD
+
+el parámetro date puede ir vacio si solo se requiere el horoscopo del dia de hoy.
 
 Que signos están soportados?
 
