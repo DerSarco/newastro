@@ -25,6 +25,6 @@ Que signos están soportados?
 - aquarius
 - pisces
 
-#Disclaimer
+# Disclaimer
 
 Las respuestas de la API son en ingles. lamentamos (en verdad no xd) los posibles inconvenientes que esto les pueda traer.
