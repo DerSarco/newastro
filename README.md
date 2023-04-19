@@ -79,4 +79,5 @@ Que signos están soportados?
 
 # Disclaimer
 
-Las respuestas de la API son en el idioma que se cante el orto :)
+Las respuestas de la API son en el idioma que se te cante el orto 😃, no prometemos traducciones correctas por google da asco en traducir textos largos.
+Peace ❤️
