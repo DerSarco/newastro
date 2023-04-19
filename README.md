@@ -2,7 +2,7 @@
 
 ### Spanglish readme
  
-Flask API para el curso Intermedio de Android de [Aristidevs](https://github.com/ArisGuimera/Android-Expert-Intermedio)
+Flask API para el curso Intermedio de Android de [Aristidevs](https://github.com/ArisGuimera)
 
 
 [DEMO](https://newastro.vercel.app/)
