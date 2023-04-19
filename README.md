@@ -1,4 +1,5 @@
 # New Astro API (Because the original one died LOL)
+# NOT A SERIOUS DEVELOPMENT
 
 ### Spanglish readme
  
@@ -78,4 +79,4 @@ Que signos están soportados?
 
 # Disclaimer
 
-Las respuestas de la API son en ingles. lamentamos (en verdad no xd) los posibles inconvenientes que esto les pueda traer.
+Las respuestas de la API son en el idioma que se cante el orto :)
