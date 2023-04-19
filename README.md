@@ -1,4 +1,4 @@
-# newastro
+# New Astro API (Because the original one died LOL)
  
 Flask API para el curso Intermedio de Android de [Aristidevs](https://github.com/ArisGuimera)
 
