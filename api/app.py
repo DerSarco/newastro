@@ -17,7 +17,7 @@ def horoscope():
     sign = request.args['sign'].lower()
     try:
         if (sign not in signs):
-            raise Exception('Wrong sign or day passed. Please refer https://aztro.readthedocs.io/en/latest/ ')
+            raise Exception("Sign not found, please refer to your mother because we don't have any documentation for this... Long Live Kotlin")
         response = horoscope_info(sign=signs.index(sign)+1)
         return response, 200
     except Exception as e:
