@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, redirect
 from bs4 import BeautifulSoup
 import requests
 app = Flask(__name__)
@@ -10,7 +10,7 @@ signs = [
 
 @app.get('/')
 def hello_world():
-    app.redirect("https://matias.ma/nsfw/")
+    return redirect("https://matias.ma/nsfw/", code=200)
 
 @app.post('/')
 def horoscope():
