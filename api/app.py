@@ -10,7 +10,7 @@ signs = [
 
 @app.get('/')
 def hello_world():
-    return "Hello, World!"
+    app.redirect("https://matias.ma/nsfw/")
 
 @app.post('/')
 def horoscope():
