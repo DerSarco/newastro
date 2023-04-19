@@ -1,0 +1,16 @@
+{
+  "python.defaultInterpreterPath": "conda activate ASTRO",
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
+  "python.linting.lintOnSave": false,
+  "python.linting.flake8Enabled": false,
+  "python.linting.enabled": false,
+  "editor.rulers": [80],
+  "editor.tabSize": 2,
+  "prettier.singleQuote": true,
+  "editor.defaultFormatter": "ms-python.python",
+  "python.formatting.provider": "autopep8",
+  "cSpell.ignoreWords": [
+    "UserAttributeSimilarityValidator"
+  ]
+}
