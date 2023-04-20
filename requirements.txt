@@ -1,4 +1,4 @@
-Flask==2.2.3
+Flask==2.2.2
 flask_api==3.0.post1
 beautifulsoup4==4.12.2
 requests==2.28.2
