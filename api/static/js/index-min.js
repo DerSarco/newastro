@@ -1,1 +1,0 @@
-!function(){"use strict";let e=document.getElementById("horoscope-anim");lottie.loadAnimation({container:e,renderer:"svg",loop:!0,autoplay:!0,path:"./assets/horoscope-wheel.json"})}();
