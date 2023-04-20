@@ -2,16 +2,22 @@ import json
 
 from flask import Flask, redirect, Response, request, Response
 from flask_api import status
+from flask import render_template
 
+import os
 
 from api.utils.horoscope_utils import *
 
-app = Flask(__name__)
 
+app = Flask(__name__, template_folder='templates', static_folder='static',  static_url_path='/static')
+
+@app.route('/<path:path>')
+def static_file(path):
+    return app.send_static_file(path)
 
 @app.get('/')
 def hello_world():
-    return redirect("https://matias.ma/nsfw/", code=302)
+    return render_template('index.html')
 
 @app.post('/')
 def horoscope():
