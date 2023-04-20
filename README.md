@@ -25,7 +25,7 @@ Realizamos una petición POST con la siguiente información en formato JSON
     "lang":"es"
 }
 ```
-`URL: https:mi-dominio-horoscope.com/`
+`URL: https://newastro.vercel.app/`
 
 Respuesta del servidor:
 ```json
@@ -56,11 +56,11 @@ La respuesta debería con la fecha actual y en su idioma general
 ### Método GET
 Se envía el signo zodiacal a través del PATH como se muestra a continuación
 
-`URL: https:mi-dominio-horoscope.com/aries`
+`URL: https://newastro.vercel.app//aries`
 
 El resto de parámetros los pasamos por QUERY:
 
-`URL: https:mi-dominio-horoscope.com/aries?date=2022-04-20&lang=es`
+`URL: https://newastro.vercel.app/aries?date=2022-04-20&lang=es`
 
 Que signos están soportados?
 
