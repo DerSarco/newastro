@@ -56,7 +56,7 @@ La respuesta debería con la fecha actual y en su idioma general
 ### Método GET
 Se envía el signo zodiacal a través del PATH como se muestra a continuación
 
-`URL: https://newastro.vercel.app//aries`
+`URL: https://newastro.vercel.app/aries`
 
 El resto de parámetros los pasamos por QUERY:
 
