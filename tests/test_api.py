@@ -15,7 +15,7 @@ app.testing = True
 def test_root_path():
     client = app.test_client()
     response = client.get('/')
-    assert response.status_code == 302
+    assert response.status_code == status.HTTP_200_OK
   
 def test_get_horoscope_info_with_sign_method_post():
   client = app.test_client()
