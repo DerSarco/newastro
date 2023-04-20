@@ -1,5 +1,5 @@
 # New Astro API (Because the original one died LOL)
-# NOT A SERIOUS DEVELOPMENT
+# NOT A SERIOUS DEVELOPMENT (or maybe yes...)
 
 ### Spanglish readme
  
