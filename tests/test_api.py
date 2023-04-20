@@ -1,13 +1,11 @@
 import json
 
 import pytest
-from flask import Flask
-from flask.testing import FlaskClient
 from flask_api import status
 
+# trunk-ignore(trunk/ignore-does-nothing)
 from api.app import app, horoscope_info
-from api.utils.horoscope_utils import *
-
+from api.utils.horoscope_utils import translate_sign, get_index_from_sign
 app.testing = True
 
 # Path: tests/test_api.py

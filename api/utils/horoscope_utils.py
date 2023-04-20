@@ -6,7 +6,7 @@ from flask_api import status
 from googletrans import Translator
 from markupsafe import escape
 
-from api.settings import *
+from api.settings import HOROSCOPE_DOMAIN_TODAY, HOROSCOPE_DOMAIN_DATE
 
 NATIVE_LANG = 'en'
 translator = Translator(service_urls=['translate.google.com', ])

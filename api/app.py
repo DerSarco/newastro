@@ -1,12 +1,11 @@
 import json
 
-from flask import Flask, redirect, Response, request, Response
+from flask import Flask, request, Response
 from flask_api import status
 from flask import render_template
 
-import os
 
-from api.utils.horoscope_utils import *
+from api.utils.horoscope_utils import get_horoscope
 
 
 app = Flask(__name__, template_folder='templates', static_folder='static',  static_url_path='/static')
