@@ -16,8 +16,7 @@ def config_docs(app: Flask):
             },
             "version": "0.1"
         },
-        "schemes": [
-            "http",
+        "schemes": [            
             "https"
         ],
         "basePath": "/",
