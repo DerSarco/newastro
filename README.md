@@ -1,59 +1,71 @@
 # New Astro API (Because the original one died LOL)
-# NOT A SERIOUS DEVELOPMENT (or maybe yes...)
+
+![Untitled](https://newastro-gules.vercel.app/static/assets/header.png)
+
+# NOT A SERIOUS DEVELOPMENT (or maybe yes…)
 
 ### Spanglish readme
- 
-Flask API para el curso Intermedio de Android de [Aristidevs](https://github.com/ArisGuimera/Android-Expert-Intermedio)
 
+Flask API para el curso Intermedio de Android de [Aristidevs](https://github.com/ArisGuimera/Android-Expert-Intermedio)
 
 [DEMO](https://newastro.vercel.app/)
 
 # Agradecimientos
 
- Por dedicarle tiempo a esta basura de proyecto, quiero expresar mis sinceros agradecimientos a:
+Por dedicarle tiempo a esta basura de proyecto, quiero expresar mis sinceros agradecimientos a:
 
 - [Erix](https://github.com/erix-mx)
 
 Realizamos una petición POST con la siguiente información en formato JSON
 
-
 # API
+
+Method POST
+
 ```json
 {
-    "sign":"libra",
-    "date":"2020-12-12",
-    "lang":"es"
+  "date": "2020-01-01",
+  "lang": "fr",
+  "sign": "Libra"
 }
 ```
+
 `URL: https://newastro.vercel.app/`
 
 Respuesta del servidor:
+
 ```json
 {
-    "icon": "♎",
-    "index": 7,
-    "content": "19 de abril de 2023 - Este es el día para escuchar y observar, Libra.Hay mucho que aprender de lo que sucede a tu alrededor.Es posible que te sorprenda el impacto de la misma.Demasiadas conversaciones ahora podría resultar infructuosa e incluso volver a ponerlo de alguna manera, especialmente si se usa conversación para ocultar sus inseguridades.Mantenga los ojos y los oídos abiertos.Mañana puedes compartir lo que aprendes."
+   "date":"2023-04-23",
+   "horoscope":"Apr 23, 2023 - Combine your discipline and expansiveness today and see what manifests. Concentrate on your investments and home. The energy of the day is quite powerful and not something to be taken lightly. You may have much greater control than you realize. Understand that you have to be the one to take the initiative in order to activate the magic of today.",
+   "icon":"http://127.0.0.1:5000/static/assets/zodiac-7.png",
+   "id":7,
+   "sign":"Libra"
 }
-````
+```
 
 Date and Lang se puede omitir de la siguiente manera
+
 ```json
 {
-    "sign":"libra"
+  "sign": "Aries"
 }
-````
+```
 
 La respuesta debería con la fecha actual y en su idioma general
 
 ```json
 {
-    "icon": "♎",
-    "index": 7,
-    "content": "Apr 19, 2023 - This is the day to listen and observe, Libra. There is a lot to learn from what's going on around you. You might be surprised at the impact of it. Too much talk now could prove fruitless and even set you back in some way, especially if talk is used to hide your insecurities. Keep your eyes and ears open. Tomorrow you can share what you learn."
+   "date":"2023-04-23",
+   "horoscope":"Apr 23, 2023 - Do something that inspires the passion within you, Aries. Don't be discouraged by setbacks - be motivated. Use discipline and patience to set your dreams in motion. Be realistic in your approach. The time has come to face the music. Whatever you do, don't shrink into the background and expect others to take care of things for you. The only one who acts in your best interests is you.",
+   "icon":"http://127.0.0.1:5000/static/assets/zodiac-1.png",
+   "id":1,
+   "sign":"Aries"
 }
-````
+```
 
 ### Método GET
+
 Se envía el signo zodiacal a través del PATH como se muestra a continuación
 
 `URL: https://newastro.vercel.app/aries`
@@ -77,7 +89,10 @@ Que signos están soportados?
 - aquarius
 - pisces
 
+## Api docs fue agregado
+
+![Untitled](https://newastro-gules.vercel.app/static/assets/apidocs.png)
+
 # Disclaimer
 
-Las respuestas de la API son en el idioma que se te cante el orto 😃, no prometemos traducciones correctas por que google da asco en traducir textos largos.
-Peace ❤️
+Las respuestas de la API son en el idioma que se te cante el orto 😃, no prometemos traducciones correctas por que google da asco en traducir textos largos. Peace ❤️
