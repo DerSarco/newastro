@@ -51,6 +51,8 @@ def post_horoscope():
   
   try:
     horoscope = service.get_horoscope_info(sign, date, lang)
+    url = f"{request.scheme}://{request.host}"
+    horoscope.icon = horoscope.icon.format(path=f"{url}/static/assets")
     return jsonify(horoscope.__dict__), Status.HTTP_OK
   except ValueError as e:
     return jsonify({'error': e.args[0]}), Status.HTTP_BAD_REQUEST
