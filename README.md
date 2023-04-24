@@ -1,6 +1,6 @@
 # New Astro API (Because the original one died LOL)
 
-![Untitled](README%207caf0ba1a8e04a6e90b903e02563eb91/Untitled.png)
+![Untitled](https://newastro-gules.vercel.app/static/assets/header.png)
 
 # NOT A SERIOUS DEVELOPMENT (or maybe yes…)
 
@@ -91,7 +91,7 @@ Que signos están soportados?
 
 ## Api docs fue agregado
 
-![Untitled](README%207caf0ba1a8e04a6e90b903e02563eb91/Untitled%201.png)
+![Untitled](https://newastro-gules.vercel.app/static/assets/apidocs.png)
 
 # Disclaimer
 
