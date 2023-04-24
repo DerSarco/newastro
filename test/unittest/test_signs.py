@@ -1,5 +1,5 @@
 import pytest
-from app.utils.signs import SIGNS, get_month_from_sign
+from app.utils.signs import SIGNS, get_id_from_sign
 
 def test_get_month_from_sign_valid_sign():    
     
@@ -8,7 +8,7 @@ def test_get_month_from_sign_valid_sign():
     expected_month = 5
     expected_result = (expected_month, SIGNS[sign])    
     # Assert
-    assert get_month_from_sign(sign) == expected_result
+    assert get_id_from_sign(sign) == expected_result
 
 def test_get_month_from_sign_empty_sign():
     # Arrange
@@ -16,7 +16,7 @@ def test_get_month_from_sign_empty_sign():
     expected_month = 1
     expected_result = (expected_month, SIGNS['aries'])    
     # Assert
-    assert get_month_from_sign(sign) == expected_result
+    assert get_id_from_sign(sign) == expected_result
 
 def test_get_month_from_sign_invalid_sign():
     # Arrange
@@ -24,4 +24,4 @@ def test_get_month_from_sign_invalid_sign():
     
     # Assert
     with pytest.raises(ValueError):
-        get_month_from_sign(sign)
+        get_id_from_sign(sign)

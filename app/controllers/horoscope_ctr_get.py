@@ -3,6 +3,7 @@ from flask import Blueprint, jsonify, request
 from app.repositories.horoscope_repository import HoroscopeRepository
 from app.services.horoscope_service import HoroscopeService
 from app.utils.status_code import Status
+from app.utils.signs import SIGNS
 
 horoscope_blueprint_get = Blueprint('horoscope_get', __name__)
 
@@ -59,14 +60,49 @@ def get_horoscope(sign=None):
   lang = request.args.get('lang', None)
   
   horoscope_repository = HoroscopeRepository()
-  service = HoroscopeService(horoscope_repository)
-  
+  service = HoroscopeService(horoscope_repository)  
   try:
     horoscope = service.get_horoscope_info(sign, date, lang)
+    url = f"{request.scheme}://{request.host}"
+    horoscope.icon = horoscope.icon.format(path=f"{url}/static/assets")
     return jsonify(horoscope.__dict__), Status.HTTP_OK
   except ValueError as e:
     return jsonify({'error': e.args[0]}), Status.HTTP_BAD_REQUEST
   except Exception as e:
     return jsonify({'error': e.args[0]}), Status.HTTP_INTERNAL_SERVER_ERROR
   
-  
+@horoscope_blueprint_get.route('/list/', methods=['GET'])
+def get_horoscope_list():
+  """
+  Obtener la lista de horóscopos.
+
+  Devuelve la lista de horóscopos con sus iconos y URLs de imágenes actualizadas.
+
+  ---
+  tags:
+    - Horoscope  
+  responses:
+    200:
+      description: Lista de horóscopos con iconos y URLs de imágenes actualizadas
+      schema:
+        type: array
+        items:
+          type: object
+          properties:
+            icon:
+              type: string
+              description: Icono del horóscopo
+              example: ...assets/img/horoscope/aries.png
+            id:
+              type: integer
+              description: ID del horóscopo
+              example: 1
+            name:
+              type: string
+              description: Nombre del horóscopo
+              example: Aries
+
+  """
+  url = f"{request.scheme}://{request.host}"
+  list_sign = list(map(lambda sign: {**sign, "icon": sign["icon"].format(path=f"{url}/static/assets")}, SIGNS.values()))
+  return jsonify(list_sign), Status.HTTP_OK

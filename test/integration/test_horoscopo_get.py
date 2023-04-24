@@ -25,7 +25,7 @@ def test_get_horoscope(client):
     assert response.status_code == Status.HTTP_OK
     assert 'horoscope' in json.loads(response.get_data(as_text=True))
     
-def test_post_horoscope_when_date_is_future(client):
+def test_get_horoscope_when_date_is_future(client):
     data = {
         'sign': 'Leo',
         'date': '2030-04-22'
@@ -34,7 +34,7 @@ def test_post_horoscope_when_date_is_future(client):
     assert response.status_code == Status.HTTP_BAD_REQUEST 
     assert 'error' in json.loads(response.get_data(as_text=True))   
     
-def test_post_horoscope_when_date_is_past(client):
+def test_get_horoscope_when_date_is_past(client):
     data = {
         'sign': 'Leo',
         'date': '2010-04-22'
@@ -42,7 +42,7 @@ def test_post_horoscope_when_date_is_past(client):
     response = client.get(f"/{data['sign']}/?date={data['date']}", json=data)
     assert response.status_code == Status.HTTP_OK    
     
-def test_post_horoscope_when_date_is_invalid(client):
+def test_get_horoscope_when_date_is_invalid(client):
     data = {
         'sign': 'Leo',
         'date': '2010-04-XX'
@@ -51,7 +51,7 @@ def test_post_horoscope_when_date_is_invalid(client):
     assert response.status_code == Status.HTTP_BAD_REQUEST
     assert 'error' in json.loads(response.get_data(as_text=True))   
     
-def test_post_horoscope_when_lang_is_invalid(client):
+def test_get_horoscope_when_lang_is_invalid(client):
     data = {
         'sign': 'Leo',
         'date': '2010-04-22',
@@ -61,7 +61,7 @@ def test_post_horoscope_when_lang_is_invalid(client):
     assert response.status_code == Status.HTTP_BAD_REQUEST
     assert 'error' in json.loads(response.get_data(as_text=True))
 
-def test_post_horoscope_when_sign_is_invalid(client):
+def test_get_horoscope_when_sign_is_invalid(client):
     data = {
         'sign': 'XX',
         'date': '2010-04-22'
@@ -72,7 +72,11 @@ def test_post_horoscope_when_sign_is_invalid(client):
 
 
 
-
+def test_get_horoscope_list(client):
+    response = client.get('/list/')
+    print(response.text)
+    assert response.status_code == Status.HTTP_OK
+    
 
 
 

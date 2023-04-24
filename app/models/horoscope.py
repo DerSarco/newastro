@@ -1,9 +1,9 @@
 
 class Horoscope:
-  def __init__(self, sign, date, horoscope, icon, number_month):
+  def __init__(self, sign, date, horoscope, icon, id):
     self.sign = sign
     self.date = date
     self.horoscope = horoscope
     self.icon = icon
-    self.number_month = number_month
+    self.id = id
     
