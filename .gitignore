@@ -1,5 +1,6 @@
 .vercel
 .vscode
+.DS_Store
 
 *.pyc
 #idea
