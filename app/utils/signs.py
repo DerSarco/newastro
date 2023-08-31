@@ -37,7 +37,7 @@ SIGNS = {
    "scorpio":{
       "icon":"{path}/zodiac-8.png",
       "id":8,
-      "name":"Scorpion"
+      "name":"Scorpio"
    },
    "sagittarius":{
       "icon":"{path}/zodiac-9.png",
