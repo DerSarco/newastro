@@ -49,7 +49,7 @@ def post_horoscope():
           date:
             type: string
             description: fecha del horoscopo
-            example: 12/12/2022
+            example: 2020-01-01
           horoscope:
             type: string
             description: Horoscopo del signo
@@ -59,7 +59,7 @@ def post_horoscope():
             description: imagen del signo
             example: ...assets/img/horoscope/aries.png
           id:
-            type: string
+            type: int
             description: id del signo
             example: 10
     400:
