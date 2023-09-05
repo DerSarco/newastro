@@ -34,10 +34,7 @@ def get_horoscope(sign=None):
   responses:
     200:
       description: OK
-      schema:
-        type: object
-        items:
-          type: object
+      schema: object
           properties:
             sign:
               type: string
