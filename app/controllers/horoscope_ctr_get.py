@@ -37,7 +37,7 @@ def get_horoscope(sign=None):
       schema:
         type: object
         properties:
-          # Define the properties of the response object here
+          $ref: '#/models/horoscope'
     400:
       description: Bad Request
       schema:
