@@ -40,7 +40,9 @@ def post_horoscope():
     200:
       description: OK
       schema:
-        type: object
+        type: array
+        items:
+          type: object
           properties:
             sign:
               type: string
