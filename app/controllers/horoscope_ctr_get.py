@@ -36,8 +36,29 @@ def get_horoscope(sign=None):
       description: OK
       schema:
         type: object
-        properties:
-          $ref: '#/models/horoscope'
+        items:
+          type: object
+          properties:
+            sign:
+              type: string
+              description: Signo
+              example: aries
+            date:
+              type: string
+              description: fecha del horoscopo
+              example: 12/12/2022
+            horoscope:
+              type: string
+              description: Horoscopo del signo
+              example: Hoy será un día asqueroso para ti.
+            icon:
+              type: string
+              description: imagen del signo
+              example: ...assets/img/horoscope/aries.png
+            id:
+              type: string
+              description: id del signo
+              example: 10
     400:
       description: Bad Request
       schema:

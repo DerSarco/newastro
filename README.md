@@ -16,11 +16,12 @@ Por dedicarle tiempo a esta basura de proyecto, quiero expresar mis sinceros agr
 
 - [Erix](https://github.com/erix-mx)
 
-[]("https://avatars.githubusercontent.com/u/82125058?v=4")
+![Erix](https://avatars.githubusercontent.com/u/82125058?v=4)
+
+# API
 
 Realizamos una petición POST con la siguiente información en formato JSON
 
-# API
 
 Method POST
 
