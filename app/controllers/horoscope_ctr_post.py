@@ -49,7 +49,7 @@ def post_horoscope():
           date:
             type: string
             description: fecha del horoscopo
-            example: 2020-01-01
+            example: "2020-01-01"
           horoscope:
             type: string
             description: Horoscopo del signo
