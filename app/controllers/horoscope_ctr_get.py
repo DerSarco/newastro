@@ -52,7 +52,7 @@ def get_horoscope(sign=None):
           icon:
             type: string
             description: imagen del signo
-            example: ...assets/img/horoscope/aries.png
+            example: "https://newastro.vercel.app/static/assets/zodiac-1.png"
           id:
             type: id
             description: id del signo
@@ -111,7 +111,7 @@ def get_horoscope_list():
             icon:
               type: string
               description: Icono del horóscopo
-              example: ...assets/img/horoscope/aries.png
+              example: "https://newastro.vercel.app/static/assets/zodiac-1.png"
             id:
               type: integer
               description: ID del horóscopo

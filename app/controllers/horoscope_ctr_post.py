@@ -57,7 +57,7 @@ def post_horoscope():
           icon:
             type: string
             description: imagen del signo
-            example: ...assets/img/horoscope/aries.png
+            example: "https://newastro.vercel.app/static/assets/zodiac-1.png"
           id:
             type: int
             description: id del signo
